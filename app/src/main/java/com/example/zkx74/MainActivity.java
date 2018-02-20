@@ -39,9 +39,11 @@ public class MainActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.btn_signin:
                 showToast("苟利国家生死以");
+                showToast("岂因祸福避趋之");
                 break;
             case R.id.btn_login:
                 showToast("登录成功");
+                showToast("+1s");
                 break;
         }
     }
