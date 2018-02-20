@@ -31,6 +31,15 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
     }
+    /*延时函数*/
+    private void delay(int ms) {
+        try {
+            Thread.currentThread();
+            Thread.sleep(ms);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
     public void showToast(String s){
         Toast.makeText(this,s,Toast.LENGTH_SHORT).show();
     }
@@ -39,11 +48,9 @@ public class MainActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.btn_signin:
                 showToast("苟利国家生死以");
-                showToast("岂因祸福避趋之");
                 break;
             case R.id.btn_login:
-                showToast("登录成功");
-                showToast("+1s");
+                showToast("登录成功+1s");
                 break;
         }
     }
