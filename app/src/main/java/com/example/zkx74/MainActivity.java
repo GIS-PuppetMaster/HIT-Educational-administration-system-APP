@@ -51,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.btn_login:
                 showToast("登录成功+1s");
+                Intent intent=new Intent(MainActivity.this,FunctionActivity.class);
+                startActivity(intent);
                 break;
         }
     }

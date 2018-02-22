@@ -1,5 +1,6 @@
 package com.example.zkx74;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -31,12 +32,20 @@ public class FunctionActivity extends AppCompatActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.bus:
+                Intent intent=new Intent(FunctionActivity.this,Bus.class);
+                startActivity(intent);
                 break;
             case R.id.check_score:
+                Intent intent2=new Intent(FunctionActivity.this,CheckScore.class);
+                startActivity(intent2);
                 break;
             case R.id.check_schedule:
+                Intent intent3=new Intent(FunctionActivity.this,CheckSchedule.class);
+                startActivity(intent3);
                 break;
             case R.id.map:
+                Intent intent4=new Intent(FunctionActivity.this,Map.class);
+                startActivity(intent4);
                 break;
         }
     }
