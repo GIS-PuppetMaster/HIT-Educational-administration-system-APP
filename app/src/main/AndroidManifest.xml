@@ -22,10 +22,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".FunctionActivity" />
-        <activity android:name=".CheckScore" />
-        <activity android:name=".CheckSchedule" />
-        <activity android:name=".Bus" />
-        <activity android:name=".Map"></activity>
     </application>
 
 </manifest>

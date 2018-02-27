@@ -1,25 +1,32 @@
 package com.example.zkx74;
 
-import android.content.Intent;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class FunctionActivity extends AppCompatActivity {
+public class FunctionActivity extends AppCompatActivity   {
 
 
-    @BindView(R.id.bus)
-    View bus;
-    @BindView(R.id.check_score)
-    View checkScore;
     @BindView(R.id.check_schedule)
-    View checkSchedule;
+    RadioButton checkSchedule;
+    @BindView(R.id.check_score)
+    RadioButton checkScore;
+    @BindView(R.id.bus)
+    RadioButton bus;
     @BindView(R.id.map)
-    View map;
+    RadioButton map;
+    @BindView(R.id.radioGroup)
+    RadioGroup radioGroup;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,25 +35,41 @@ public class FunctionActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.bus, R.id.check_score, R.id.check_schedule, R.id.map})
+    @OnClick({R.id.check_schedule, R.id.check_score, R.id.bus, R.id.map, R.id.radioGroup})
     public void onViewClicked(View view) {
         switch (view.getId()) {
-            case R.id.bus:
-                Intent intent=new Intent(FunctionActivity.this,Bus.class);
-                startActivity(intent);
+            case R.id.check_schedule:
+                FragmentOfSchedule fragmentSchedule = new FragmentOfSchedule();
+                FragmentManager fragmentManagerSchedule=getFragmentManager();
+                FragmentTransaction transactionSchedule = fragmentManagerSchedule.beginTransaction();
+                transactionSchedule.replace(R.id.fragment1,fragmentSchedule);
+                transactionSchedule.commit();
                 break;
             case R.id.check_score:
-                Intent intent2=new Intent(FunctionActivity.this,CheckScore.class);
-                startActivity(intent2);
+                FragmentOfScore fragmentScore = new FragmentOfScore();
+                FragmentManager fragmentManagerScore=getFragmentManager();
+                FragmentTransaction transactionScore = fragmentManagerScore.beginTransaction();
+                transactionScore.replace(R.id.fragment1,fragmentScore);
+                transactionScore.commit();
                 break;
-            case R.id.check_schedule:
-                Intent intent3=new Intent(FunctionActivity.this,CheckSchedule.class);
-                startActivity(intent3);
+            case R.id.bus:
+                FragmentOfBus fragmentBus = new FragmentOfBus();
+                FragmentManager fragmentManagerBus=getFragmentManager();
+                FragmentTransaction transactionBus = fragmentManagerBus.beginTransaction();
+                transactionBus.replace(R.id.fragment1,fragmentBus);
+                transactionBus.commit();
                 break;
             case R.id.map:
-                Intent intent4=new Intent(FunctionActivity.this,Map.class);
-                startActivity(intent4);
+                FragmentOfMap fragmentMap = new FragmentOfMap();
+                FragmentManager fragmentManagerMap=getFragmentManager();
+                FragmentTransaction transactionMap = fragmentManagerMap.beginTransaction();
+                transactionMap.replace(R.id.fragment1,fragmentMap);
+                transactionMap.commit();
+                break;
+            case R.id.radioGroup:
                 break;
         }
     }
+
+
 }
