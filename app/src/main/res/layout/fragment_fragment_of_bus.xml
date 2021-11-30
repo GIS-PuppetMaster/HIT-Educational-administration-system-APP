@@ -3,13 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.zkx74.FragmentOfBus"
-    android:background="#434343">
+    android:background="#000000"
+    >
 
     <!-- TODO: Update blank fragment layout -->
     <me.panpf.sketch.SketchImageView
         android:id="@+id/image1"
         android:layout_width="match_parent"
-        android:layout_height="568dp"
+        android:layout_height="match_parent"
         />
 
 </FrameLayout>

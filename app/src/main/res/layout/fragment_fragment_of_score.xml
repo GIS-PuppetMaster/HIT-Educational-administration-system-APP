@@ -2,13 +2,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.zkx74.FragmentOfScore"
-    android:background="#434343">
+    android:background="#000000"
+    tools:context="com.example.zkx74.FragmentOfScore">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical">
+   <TextView
+       android:id="@+id/totalText"
+       android:layout_width="match_parent"
+       android:background="@color/Light_Black"
+       android:textSize="18sp"
+       android:textColor="@color/White"
+       android:text="Total"
+       android:gravity="center_vertical"
+       android:layout_height="50dp"
+       android:layout_marginBottom="5dp"/>
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"></ListView>
+    </LinearLayout>
+
 
 </FrameLayout>

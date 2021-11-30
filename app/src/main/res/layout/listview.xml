@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:padding="5dp">
+    <LinearLayout
+        android:id="@+id/LL_List"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@drawable/score_list">
+            <TextView
+                android:id="@+id/course"
+                android:layout_gravity="left"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:text="test123"
+                android:paddingLeft="10dp"
+                android:textColor="@color/Light_Gray"
+                android:textSize="20sp"
+                android:gravity="center_vertical"/>
+        <TextView
+            android:id="@+id/credit"
+            android:layout_gravity="left"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:text="2 学分"
+            android:paddingLeft="10dp"
+            android:textColor="@color/Light_Gray"
+            android:textSize="20sp"
+            android:gravity="center_vertical"/>
+            <TextView
+                android:id="@+id/course_score"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:text="50"
+                android:textSize="20sp"
+                android:textColor="@color/Light_Gray"
+                android:layout_gravity="right"
+                android:paddingLeft="50dp"
+                android:gravity="center_vertical"/>
+    </LinearLayout>
+</LinearLayout>
